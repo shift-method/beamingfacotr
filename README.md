@@ -37,6 +37,10 @@ Support Filter_Name: u,g,r,i,z,TESS,G,Gbp,Grp,U,B,V,R,I,kepler,NUV_CSST,u_c,g_c,
 >    u,g,r,i,z are from SDSS;
 > 
 >    NUV_CSST,u_c,g_c,r_c,i_c,z_c,y_c are from CSST
+>
+> TESS for TESS
+>
+> kepler for *Kepler*
 > 
 For Example:  
 
