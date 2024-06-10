@@ -111,7 +111,8 @@ def ReadSpec(specfile=None,spectype=None):
         return wave,flux
     if spectype=='PHOENIX':
         from astropy.io import fits
-        wave=fits.open('WAVE_PHOENIX-ACES-AGSS-COND-2011.fits').data[0]
+        fpath=os.path.join(os.path.dirname(__file__),'WAVE_PHOENIX-ACES-AGSS-COND-2011.fits')
+        wave=fits.open(fpath)[0].data
         flux=fits.open(specfile)[0].data
         return wave,flux
     if spectype=='TMAP':
@@ -161,6 +162,7 @@ def ReadFilter(band,bandfile,bandtype):
     """
     Support filter names: u,g,r,i,z,
     """
+    import os
     if band==None:
         raise KeyError(f'Undefined filter passband.')
     LOG={'u': 'SLOAN_SDSS.u.dat.P',
@@ -193,7 +195,8 @@ def ReadFilter(band,bandfile,bandtype):
     if band=='USER':
         data=open(bandfile,'r').readlines()
     else:
-        data=open(f'PassBandFile/{LOG[band]}','r').readlines()
+        fpath=os.path.join(os.path.dirname(__file__),'PassBandFile',LOG[band])
+        data=open(fpath,'r').readlines()
         bandtype=LOG[band].split('.')[-1]
     if data[0][0]=='#':
         sign=1
@@ -209,7 +212,7 @@ def ReadFilter(band,bandfile,bandtype):
 
 
 def factor(specfile=None,spectype=None,showspec=False,convert_air=False,band=None,bandfile=None,bandtype='E',
-          RV_min=None,RV_max=None,K=None,V0=0,e=None,omega=0,ebv=0,Constant_Factor=True,Dindex=None,plot_beaming=False):
+          RV_min=None,RV_max=None,K=None,V0=0,e=0,omega=0,ebv=0,Constant_Factor=True,Dindex=None,plot_beaming=False):
     from scipy import interpolate
     """
     Users can specific their own flux calibrated spectra
@@ -244,12 +247,8 @@ def factor(specfile=None,spectype=None,showspec=False,convert_air=False,band=Non
         pass
     else:
         if K!=None:
-            if e==None:
-                RV_min=V0-K
-                RV_max=V0+K
-            else:
-                RV_min=V0-K+e*np.cos(omega/180*np.pi)
-                RV_max=V0+K+e*np.cos(omega/180*np.pi)
+            RV_min=V0-K+e*np.cos(omega/180*np.pi)
+            RV_max=V0+K+e*np.cos(omega/180*np.pi)
         else:
             raise KeyError(f'Radial Velocity range not defined!')
     if Constant_Factor:
