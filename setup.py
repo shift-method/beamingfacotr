@@ -12,16 +12,16 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'beamfactor'
+NAME = 'beamingfactor'
 DESCRIPTION = 'Program to compute beaming factor.'
 URL = 'https://github.com/shift-method/beamingfactor'
 EMAIL = 'zhengchuanjie@nao.cas.cn'
 AUTHOR = 'Chuanjie Zheng'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.1.0'
+VERSION = '1.0.1'
 
 # What packages are required for this module to be executed?
-REQUIRED = [
+REQUIRED = ['scipy','numpy','matplotlib','astropy','dust_extinction'
     # 'requests', 'maya', 'records',
 ]
 
@@ -85,9 +85,9 @@ class UploadCommand(Command):
         self.status('Uploading the package to PyPI via Twine…')
         os.system('twine upload dist/*')
 
-        self.status('Pushing git tags…')
-        os.system('git tag v{0}'.format(about['__version__']))
-        os.system('git push --tags')
+#         self.status('Pushing git tags…')
+#         os.system('git tag v{0}'.format(about['__version__']))
+#         os.system('git push --tags')
 
         sys.exit()
 
