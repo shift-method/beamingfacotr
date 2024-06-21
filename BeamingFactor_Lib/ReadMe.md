@@ -1,4 +1,5 @@
 # This library contains beaming factors computed with three theory spectra library: [PHOENIX](https://phoenix.astro.physik.uni-goettingen.de/?page_id=15), [ATLAS9](https://wwwuser.oats.inaf.it/fiorella.castelli/grids.html), and [TMAP](http://astro.uni-tuebingen.de/~rauch/TMAF/flux_H+He.html).  
+# For more details on computation routine, please refer to: Zheng et al. submitted..
 # File Description
 Each file are archived in csv file (comma seperated ascii file).  
 Files are named as *_{Filter_Name}.csv  
@@ -15,8 +16,30 @@ Filter_Name are name of filters as follows:
 >
 > kepler for *Kepler* satellite
 # PHOENIX Parameters Definition  
-teff: effective temperature  
-logg: surface gravity  
-Z: Metallicity  
-ebv: stellar extinction E(B-V)  
-BF_FIT: beaming factor	BF_ERR	BF_C	D1	D2	D5
+Factors for different alpha elements abundances are stored in eahc corresponding subdirectories.  
+Each csv file contain 10 columns as follows:
+- teff: Effective temperature.  
+- logg: Surface gravity.  
+- Z: Metallicity.  
+- ebv: Stellar extinction E(B-V).  
+- BF_FIT: Beaming factors calculated from linear fitting between beaming flux and radial velocities.  
+- BF_ERR: Beaming factor uncertainties from linear fitting between beaming flux and radial velocities.
+- BF_C: A reference index. Users can ignore this column.
+- D1: D1 index. See definition in Zheng et al. submitted. 
+- D2: D2 index. See definition in Zheng et al. submitted.
+- D5: D5 index. See definition in Zheng et al. submitted.
+# ATLAS9 Parameters Definition
+Each csv file contain 13 columns as follows:
+- teff: Effective temperature.  
+- logg: Surface gravity. 
+- [M/H]: Metallicity. **All values in csv files are multiplied by 10.**
+- alpha: Alpha elements enhancement. False means solar abundance. True means alpha +0.4 enhanced.
+- DY: He element enhancement. False for solar value. True for He enhanced by +0.1 dex. 
+- vturb: Micro-turbulance velocity in km/s.
+- ebv: Stellar extinction E(B-V).  
+- BF_FIT: Beaming factors calculated from linear fitting between beaming flux and radial velocities.  
+- BF_ERR: Beaming factor uncertainties from linear fitting between beaming flux and radial velocities.
+- BF_C: A reference index. Users can ignore this column.
+- D1: D1 index. See definition in Zheng et al. submitted. 
+- D2: D2 index. See definition in Zheng et al. submitted.
+- D5: D5 index. See definition in Zheng et al. submitted.
