@@ -48,13 +48,17 @@ An example spectrum file:
 ### Input Filter Passband:    
 Filter name should be given with band='Filter_Name'.  
 Support Filter_Name: u,g,r,i,z,TESS,G,Gbp,Grp,U,B,V,R,I,kepler,NUV_CSST,u_c,g_c,r_c,i_c,z_c,y_c.  
->    u,g,r,i,z are from SDSS;
+>    *u,g,r,i,z* are from SDSS (Sloan Digital Sky Survey);
 > 
 >    NUV_CSST,u_c,g_c,r_c,i_c,z_c,y_c are from CSST
 >
-> TESS for TESS
+>    *U,B,V,R,I* are Johnson filter system
 >
-> kepler for *Kepler*
+>    *G,Gbp,Grp* are *Gaia* filter system.
+> 
+> TESS for TESS satellite
+>
+> kepler for *Kepler* satellite
 > 
 For Example:  
 
