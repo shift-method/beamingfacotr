@@ -34,8 +34,21 @@ Each csv file contain 13 columns as follows:
 - logg: Surface gravity. 
 - [M/H]: Metallicity. **All values in csv files are multiplied by 10.**
 - alpha: Alpha elements enhancement. False means solar abundance. True means alpha +0.4 enhanced.
-- DY: He element enhancement. False for solar value. True for He enhanced by +0.1 dex. 
+- DY: Helium element enhancement. False for solar value. True for Helium enhanced by +0.1 dex. 
 - vturb: Micro-turbulance velocity in km/s.
+- ebv: Stellar extinction E(B-V).  
+- BF_FIT: Beaming factors calculated from linear fitting between beaming flux and radial velocities.  
+- BF_ERR: Beaming factor uncertainties from linear fitting between beaming flux and radial velocities.
+- BF_C: A reference index. Users can ignore this column.
+- D1: D1 index. See definition in Zheng et al. submitted. 
+- D2: D2 index. See definition in Zheng et al. submitted.
+- D5: D5 index. See definition in Zheng et al. submitted.
+# TMAP Parameters Definition
+Each csv file contain 11 columns as follows:
+- teff: Effective temperature.  
+- logg: Surface gravity.
+- H: Hydrogen abundance in percentage by mass.
+- He:	Helium abundance in percentage by mass.
 - ebv: Stellar extinction E(B-V).  
 - BF_FIT: Beaming factors calculated from linear fitting between beaming flux and radial velocities.  
 - BF_ERR: Beaming factor uncertainties from linear fitting between beaming flux and radial velocities.
