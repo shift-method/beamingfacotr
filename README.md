@@ -56,9 +56,9 @@ Support Filter_Name: u,g,r,i,z,TESS,G,Gbp,Grp,U,B,V,R,I,kepler,NUV_CSST,u_c,g_c,
 >
 >    *G,Gbp,Grp* are *Gaia* filter system.
 > 
-> TESS for TESS satellite
+>    TESS for TESS satellite
 >
-> kepler for *Kepler* satellite
+>    kepler for *Kepler* satellite
 > 
 For Example:  
 
