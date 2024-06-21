@@ -1,5 +1,9 @@
 # Beaming Facor Library
 **A pre-computed beaming factor library is presented in directory *BeamingFactor_Lib***.  
+The library can be downloaded with:  
+
+    git clone https://github.com/shift-method/beamingfactor  
+For more detail introduction, please refer to README file inside.
 
 # BeamingFactor  
 ## Installation:
