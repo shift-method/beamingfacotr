@@ -1,4 +1,4 @@
-# This library contains beaming factors computed with three theory spectra library: [PHOENIX](https://phoenix.astro.physik.uni-goettingen.de/?page_id=15), [ATLAS9](https://wwwuser.oats.inaf.it/fiorella.castelli/grids.html), and [TMAP](http://astro.uni-tuebingen.de/~rauch/TMAF/flux_H+He.html).  
+# This library contains beaming factors computed with four theory spectra library: [PHOENIX](https://phoenix.astro.physik.uni-goettingen.de/?page_id=15), [ATLAS9](https://wwwuser.oats.inaf.it/fiorella.castelli/grids.html), [TMAP](http://astro.uni-tuebingen.de/~rauch/TMAF/flux_H+He.html), and [TLUSTY](http://svo2.cab.inta-csic.es/theory/newov2/index.php?models=tlusty_mergedbin).  
 # For more details on computation routine, please refer to: Zheng et al. submitted..
 # File Description
 Each file are archived in csv file (comma seperated ascii file).  
@@ -49,6 +49,18 @@ Each csv file contain 11 columns as follows:
 - logg: Surface gravity.
 - H: Hydrogen abundance in percentage by mass.
 - He:	Helium abundance in percentage by mass.
+- ebv: Stellar extinction E(B-V).  
+- BF_FIT: Beaming factors calculated from linear fitting between beaming flux and radial velocities.  
+- BF_ERR: Beaming factor uncertainties from linear fitting between beaming flux and radial velocities.
+- BF_C: A reference index. Users can ignore this column.
+- D1: D1 index. See definition in Zheng et al. submitted. 
+- D2: D2 index. See definition in Zheng et al. submitted.
+- D5: D5 index. See definition in Zheng et al. submitted.
+# TLUSTY Parameters Definition
+Each csv file contain 10 columns as follows:
+- teff: Effective temperature.  
+- logg: Surface gravity.
+- Z: ratio of Z/Zsun. A value 0 refers to metal free.
 - ebv: Stellar extinction E(B-V).  
 - BF_FIT: Beaming factors calculated from linear fitting between beaming flux and radial velocities.  
 - BF_ERR: Beaming factor uncertainties from linear fitting between beaming flux and radial velocities.
