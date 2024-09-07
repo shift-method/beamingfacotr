@@ -9,7 +9,7 @@ New: Compared to previous version, a new beaming factor library computed with TL
 The library can be downloaded with:  
 
     git clone https://github.com/shift-method/beamingfactor  
-For more detail introduction, please refer to README file inside.
+For more detail introduction, please refer to README file inside sub-directory *BeamingFactor_Lib*.
 
 # BeamingFactor  
 ## Installation:
