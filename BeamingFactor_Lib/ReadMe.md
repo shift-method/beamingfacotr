@@ -1,5 +1,6 @@
 # This library contains beaming factors computed with four theory spectra library: [PHOENIX](https://phoenix.astro.physik.uni-goettingen.de/?page_id=15), [ATLAS9](https://wwwuser.oats.inaf.it/fiorella.castelli/grids.html), [TMAP](http://astro.uni-tuebingen.de/~rauch/TMAF/flux_H+He.html), and [TLUSTY](http://svo2.cab.inta-csic.es/theory/newov2/index.php?models=tlusty_mergedbin).  
-# For more details on computation routine, please refer to: Zheng et al. submitted..
+# For more details on computation routine, please refer to: Zheng et al. (2024) at DOI: 10.3847/1538-4357/ad6b09.  
+# Please note that the flux values in the numerators of Equations 4 and 12 should be corresponding normalized flux, a detail that is not emphasized in the article.
 # File Description
 Each file are archived in csv file (comma seperated ascii file).  
 Files are named as *_{Filter_Name}.csv  
@@ -25,9 +26,9 @@ Each csv file contain 10 columns as follows:
 - BF_FIT: Beaming factors calculated from linear fitting between beaming flux and radial velocities.  
 - BF_ERR: Beaming factor uncertainties from linear fitting between beaming flux and radial velocities.
 - BF_C: A reference index. Users can ignore this column.
-- D1: D1 index. See definition in Zheng et al. submitted. 
-- D2: D2 index. See definition in Zheng et al. submitted.
-- D5: D5 index. See definition in Zheng et al. submitted.
+- D1: D1 index. See definition in Zheng et al. (2024) at DOI: 10.3847/1538-4357/ad6b09. 
+- D2: D2 index. See definition in Zheng et al. (2024) at DOI: 10.3847/1538-4357/ad6b09.
+- D5: D5 index. See definition in Zheng et al. (2024) at DOI: 10.3847/1538-4357/ad6b09.
 # ATLAS9 Parameters Definition
 Each csv file contain 13 columns as follows:
 - teff: Effective temperature.  
@@ -40,9 +41,9 @@ Each csv file contain 13 columns as follows:
 - BF_FIT: Beaming factors calculated from linear fitting between beaming flux and radial velocities.  
 - BF_ERR: Beaming factor uncertainties from linear fitting between beaming flux and radial velocities.
 - BF_C: A reference index. Users can ignore this column.
-- D1: D1 index. See definition in Zheng et al. submitted. 
-- D2: D2 index. See definition in Zheng et al. submitted.
-- D5: D5 index. See definition in Zheng et al. submitted.
+- D1: D1 index. See definition in Zheng et al. (2024) at DOI: 10.3847/1538-4357/ad6b09. 
+- D2: D2 index. See definition in Zheng et al. (2024) at DOI: 10.3847/1538-4357/ad6b09.
+- D5: D5 index. See definition in Zheng et al. (2024) at DOI: 10.3847/1538-4357/ad6b09.
 # TMAP Parameters Definition
 Each csv file contain 11 columns as follows:
 - teff: Effective temperature.  
@@ -53,9 +54,9 @@ Each csv file contain 11 columns as follows:
 - BF_FIT: Beaming factors calculated from linear fitting between beaming flux and radial velocities.  
 - BF_ERR: Beaming factor uncertainties from linear fitting between beaming flux and radial velocities.
 - BF_C: A reference index. Users can ignore this column.
-- D1: D1 index. See definition in Zheng et al. submitted. 
-- D2: D2 index. See definition in Zheng et al. submitted.
-- D5: D5 index. See definition in Zheng et al. submitted.
+- D1: D1 index. See definition in Zheng et al. (2024) at DOI: 10.3847/1538-4357/ad6b09. 
+- D2: D2 index. See definition in Zheng et al. (2024) at DOI: 10.3847/1538-4357/ad6b09.
+- D5: D5 index. See definition in Zheng et al. (2024) at DOI: 10.3847/1538-4357/ad6b09.
 # TLUSTY Parameters Definition
 Each csv file contain 10 columns as follows:
 - teff: Effective temperature.  
@@ -65,6 +66,6 @@ Each csv file contain 10 columns as follows:
 - BF_FIT: Beaming factors calculated from linear fitting between beaming flux and radial velocities.  
 - BF_ERR: Beaming factor uncertainties from linear fitting between beaming flux and radial velocities.
 - BF_C: A reference index. Users can ignore this column.
-- D1: D1 index. See definition in Zheng et al. submitted. 
-- D2: D2 index. See definition in Zheng et al. submitted.
-- D5: D5 index. See definition in Zheng et al. submitted.
+- D1: D1 index. See definition in Zheng et al. (2024) at DOI: 10.3847/1538-4357/ad6b09. 
+- D2: D2 index. See definition in Zheng et al. (2024) at DOI: 10.3847/1538-4357/ad6b09.
+- D5: D5 index. See definition in Zheng et al. (2024) at DOI: 10.3847/1538-4357/ad6b09.
