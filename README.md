@@ -1,5 +1,11 @@
+This repository contains supplementary material for the journal article available at DOI: 10.3847/1538-4357/ad6b09.  
+This release consists of a beaming factor library and a Python-based module named 'beamingfactor' to generate the library following method described by Equation 12 in the article. Please note that the flux values in the numerators of Equations 4 and 12 should be corresponding normalized flux, a detail that is not emphasized in the article.  
+  
+New: Compared to previous version, a new beaming factor library computed with TLUSTY is added.  
+  
 # Beaming Facor Library
-**A pre-computed beaming factor library is presented in directory *BeamingFactor_Lib***.  
+
+**A pre-computed beaming factor library is presented in sub-directory *BeamingFactor_Lib***.  
 The library can be downloaded with:  
 
     git clone https://github.com/shift-method/beamingfactor  
@@ -7,7 +13,7 @@ For more detail introduction, please refer to README file inside.
 
 # BeamingFactor  
 ## Installation:
-&ensp;&ensp;We present python based program BeamingFactor for users who want to compute factors themselves.  
+&ensp;&ensp;For users who want to compute factors themselves, the python based program BeamingFactor can be installed with:  
 
     pip install beamingfactor  
 ## Quick Start Usage:  
